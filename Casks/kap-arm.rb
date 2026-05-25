@@ -11,6 +11,7 @@ cask "kap-arm" do
   depends_on macos: ">= :catalina"
 
   app "Kap.app"
+  disable_quarantine true
 
   zap trash: [
     "~/Library/Application Support/Kap",
