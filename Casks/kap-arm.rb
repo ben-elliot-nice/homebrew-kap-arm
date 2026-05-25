@@ -1,8 +1,8 @@
 cask "kap-arm" do
-  version :latest
-  sha256 :no_check
+  version "3.7.0"
+  sha256 "23d083ab814db77f41268e9a6713ae1f714e8aadf2ad6b7f02208940ff6dc7c1"
 
-  url "https://github.com/ben-elliot-nice/kap/releases/latest/download/Kap-arm64.dmg"
+  url "https://github.com/ben-elliot-nice/kap/releases/download/v3.7.0/Kap-arm64.dmg"
   name "Kap (Apple Silicon)"
   desc "Open-source screen recorder built with web technology"
   homepage "https://getkap.co/"
