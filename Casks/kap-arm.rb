@@ -1,6 +1,6 @@
 cask "kap-arm" do
   version "3.7.0"
-  sha256 "23d083ab814db77f41268e9a6713ae1f714e8aadf2ad6b7f02208940ff6dc7c1"
+  sha256 "a5a5d9d4313f745e28f787a1f1396e93d2d042fd5e552cd121d01ff62bca8ae7"
 
   url "https://github.com/ben-elliot-nice/kap/releases/download/v3.7.0/Kap-arm64.dmg"
   name "Kap (Apple Silicon)"
@@ -11,7 +11,6 @@ cask "kap-arm" do
   depends_on macos: ">= :catalina"
 
   app "Kap.app"
-  disable_quarantine true
 
   zap trash: [
     "~/Library/Application Support/Kap",
