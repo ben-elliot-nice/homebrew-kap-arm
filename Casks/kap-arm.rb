@@ -12,6 +12,11 @@ cask "kap-arm" do
 
   app "Kap.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+      args: ["-cr", "#{appdir}/Kap.app"]
+  end
+
   zap trash: [
     "~/Library/Application Support/Kap",
     "~/Library/Caches/com.wulkano.kap",
