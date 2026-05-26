@@ -1,6 +1,6 @@
 cask "kap-arm" do
   version "3.7.0"
-  sha256 "9c0b7679f59ee385f3c224b08a7776ae08d79354d11c6c1babfe977914c6e4f4"
+  sha256 "26b8980a37859de4238f10262eabd7faedcb0c2dfc265fe2968a751bb7ffd11d"
 
   url "https://github.com/ben-elliot-nice/kap/releases/download/v3.7.0/Kap-arm64.dmg"
   name "Kap (Apple Silicon)"
