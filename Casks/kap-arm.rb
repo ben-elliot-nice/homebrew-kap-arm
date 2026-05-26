@@ -1,6 +1,6 @@
 cask "kap-arm" do
   version "3.7.0"
-  sha256 "a5a5d9d4313f745e28f787a1f1396e93d2d042fd5e552cd121d01ff62bca8ae7"
+  sha256 "9c0b7679f59ee385f3c224b08a7776ae08d79354d11c6c1babfe977914c6e4f4"
 
   url "https://github.com/ben-elliot-nice/kap/releases/download/v3.7.0/Kap-arm64.dmg"
   name "Kap (Apple Silicon)"
@@ -18,13 +18,6 @@ cask "kap-arm" do
       sudo: false,
       print_stderr: false
   end
-
-  caveats <<~EOS
-    Kap is unsigned. If macOS blocks it on first launch, run:
-      xattr -cr /Applications/Kap.app
-    Or reinstall with:
-      brew install --no-quarantine --cask kap-arm
-  EOS
 
   zap trash: [
     "~/Library/Application Support/Kap",
