@@ -14,8 +14,17 @@ cask "kap-arm" do
 
   postflight do
     system_command "/usr/bin/xattr",
-      args: ["-cr", "#{appdir}/Kap.app"]
+      args: ["-r", "-d", "com.apple.quarantine", "#{appdir}/Kap.app"],
+      sudo: false,
+      print_stderr: false
   end
+
+  caveats <<~EOS
+    Kap is unsigned. If macOS blocks it on first launch, run:
+      xattr -cr /Applications/Kap.app
+    Or reinstall with:
+      brew install --no-quarantine --cask kap-arm
+  EOS
 
   zap trash: [
     "~/Library/Application Support/Kap",
