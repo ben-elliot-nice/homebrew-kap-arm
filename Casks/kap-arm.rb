@@ -14,7 +14,7 @@ cask "kap-arm" do
 
   postflight do
     system_command "/usr/bin/xattr",
-      args: ["-r", "-d", "com.apple.quarantine", "#{appdir}/Kap.app"],
+      args: ["-cr", "#{appdir}/Kap.app"],
       sudo: false,
       print_stderr: false
   end
