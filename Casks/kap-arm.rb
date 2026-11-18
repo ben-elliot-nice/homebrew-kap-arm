@@ -11,11 +11,10 @@ cask "kap-arm" do
 
   app "Kap.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-      args: ["-cr", "#{appdir}/Kap.app"],
-      sudo: false,
-      print_stderr: false
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:         ["-cr", "{{appdir}}/Kap.app"],
+        print_stderr: false
   end
 
   zap trash: [
