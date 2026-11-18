@@ -8,7 +8,6 @@ cask "kap-arm" do
   homepage "https://getkap.co/"
 
   auto_updates false
-  depends_on macos: ">= :catalina"
 
   app "Kap.app"
 
